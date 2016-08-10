@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Woohoo angular fun! :D</:D></title>
+    <script src='./js/angular.min.js' charset='utf-8'></script>
+    <script src='./js/index.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body ng-app='app'>
+    <header>
+      <h1>Look at me, I know panda stuff!</h1>
+    </header>
+    <div ng-controller='PandaController' id='pandaController'>
+      <h2>Panda Types:</h2>
+      <ul>
+        <li class="panda-item" ng-repeat='panda in pandas' ng-click="removePanda($index)">{{panda}}</li>
+      </ul>
+
+      <input id="pandaInput" type='text' ng-model='addPandaText'>
+      <input type='button' ng-disabled='addPandaText == ""' ng-click='addPanda(addPandaText)' value='Add Panda'>
+    </div>
+    <div ng-controller="StoryController" id="storyController">
+      <ul>
+        <li class="story-item" ng-repeat="story in stories" ng-click="removeStory($index)">{{story.title}}</li>
+      </ul>
+    </div>
+  </body>
+</html>

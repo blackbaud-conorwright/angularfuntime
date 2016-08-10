@@ -1,0 +1,19 @@
+ul {
+  list-style: none;
+}
+.panda-item:hover {
+  background-color: tan;
+}
+.panda-item {
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+}
+.story-item:hover {
+  background-color: tan;
+}
+.story-item {
+  width: 80%;
+  cursor: pointer;
+  padding-top: 10px;
+}
