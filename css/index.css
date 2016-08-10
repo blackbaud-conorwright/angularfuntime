@@ -1,5 +1,17 @@
 ul {
   list-style: none;
+  width: 80%;
+  border-bottom: 1px solid grey;
+  padding: 0px;
+  padding-bottom: 5px;
+  margin: 0px;
+  margin-left: 3%;
+}
+.item {
+  cursor: pointer;
+  padding-top: 10px;
+  border-top: 1px solid grey;
+  padding-bottom: 5px;
 }
 .panda-item:hover {
   background-color: tan;
@@ -7,13 +19,13 @@ ul {
 .panda-item {
   width: 150px;
   height: 30px;
-  cursor: pointer;
 }
 .story-item:hover {
   background-color: tan;
 }
 .story-item {
-  width: 80%;
-  cursor: pointer;
-  padding-top: 10px;
+  width: 100%;
+}
+#addPanda {
+  margin: 10px;
 }

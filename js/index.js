@@ -9,6 +9,7 @@ app.service("PandaDataService", function($http){
 app.controller("PandaController", function($scope){
   $scope.pandas = ["Red", "Big"];
   $scope.addPandaText = "";
+  $scope.pandaSearch = "";
   $scope.removePanda = function(index){
     $scope.pandas.splice(index, 1);
   };
@@ -16,6 +17,7 @@ app.controller("PandaController", function($scope){
     $scope.pandas.push(panda);
     $scope.addPandaText = "";
     document.getElementById("pandaInput").focus();
+    return true;
   };
 });
 
@@ -28,3 +30,9 @@ app.controller("StoryController", function($scope, PandaDataService){
     $scope.stories.splice(index, 1);
   };
 });
+
+app.directive("story-info", function(){
+  
+});
+
+template = "<li class='story-item item' ng-repeat='story in stories' ng-click='removeStory($index)'>{{story.title}}</li>"
