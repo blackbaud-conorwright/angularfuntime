@@ -1,0 +1,20 @@
+{
+  "name": "angularfun",
+  "version": "1.0.0",
+  "description": "Fun with Angular",
+  "main": "start.js",
+  "dependencies": {
+    "connect": "^3.4.1",
+    "serve-static": "^1.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "fun"
+  ],
+  "author": "That one guy over there ->",
+  "license": "ISC"
+}

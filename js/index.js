@@ -31,8 +31,10 @@ app.controller("StoryController", function($scope, PandaDataService){
   };
 });
 
-app.directive("story-info", function(){
-  
+app.directive("storyinfo", function(){
+  return {
+    restrict: "EA",
+    template: "<ul><li class='story-item item' ng-repeat='story in stories' ng-click='removeStory($index)'>{{story.title}}</li></ul>",
+    require: ["^StoryController"]
+  };
 });
-
-template = "<li class='story-item item' ng-repeat='story in stories' ng-click='removeStory($index)'>{{story.title}}</li>"

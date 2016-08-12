@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html charset="utf-8" ng-app="skytutorial">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My First SKY UX App</title>
+    <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.9/css/sky-bundle.css" integrity="sha384-w3foB08Og2kwXRYMJr78uiXbNqrK4ApyjvMK3LDnr0vDjSYkG7al2W29c7puq91X" crossorigin="anonymous">
+  </head>
+  <body>
+    <bb-navbar>
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="bb-navbar-active"><a href="">Selected Item</a></li>
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" role="button">Child Items <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="">Child Item 1</a>
+              </li>
+              <li>
+                <a href="">Child Item 2</a>
+              </li>
+              <li>
+                <a href="">Child Item 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">Right Item</a></li>
+        </ul>
+      </div>
+    </bb-navbar>
+    <bb-page-summary>
+      <bb-page-summary-image>
+        <bb-avatar
+          bb-avatar-src="'/assets/img/hernandez.jpg'">
+        </bb-avatar>
+      </bb-page-summary-image>
+      <bb-page-summary-title>
+        Robert Hernandez
+      </bb-page-summary-title>
+      <bb-page-summary-subtitle>
+        CEO, Barkbaud, Inc.
+      </bb-page-summary-subtitle>
+      <bb-page-summary-content>
+        Robert Hernandez is an important member of our organization.
+      </bb-page-summary-content>
+    </bb-page-summary>
+    <div class="container-fluid">
+      <div class="row bb-page-content-multicolumn">
+        <div class="col-md-6 bb-page-content-tile-column">
+          <bb-tile bb-tile-header="'Personal information'">
+            <div bb-tile-section>
+                <h4>Address</h4>
+                410 17th Street
+                <br>
+                Denver, CO 80202-4402
+            </div>
+          </bb-tile>
+        </div>
+        <div class="col-md-6 bb-page-content-tile-column">
+          <bb-tile bb-tile-header="'Latest gift'">
+            <div bb-tile-section>
+                <h4>$1.4k</h4>
+                Given to Building Fund
+                <br>
+                10/21/2015
+            </div>
+          </bb-tile>
+        </div>
+      </div>
+    </div>
+    <script src="https://sky.blackbaudcdn.net/skyux/1.6.9/js/sky-bundle.min.js" integrity="sha384-2ve5YcsBLY8x8UlSIqIYJLsXocT2zfsPWcHA9i2B2QX7Y6hp+LRksdrXgYmdXn6Q" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

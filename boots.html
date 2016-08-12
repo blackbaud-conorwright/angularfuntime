@@ -1,0 +1,42 @@
+<!doctype <html></html>>
+<html ng-app="stache">
+ <head>
+   <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.9/css/sky-bundle.css">
+ </head>
+<body ng-controller="SessionController">
+
+<ng-include src="'./templates/navbar.html'"></ng-include>
+
+<div class="container" ng-controller="TestController">
+  <div class="row">
+    <div class="col-md-4 col-md-push-8">
+      <form>
+        <input class="form-control" type="search" placeholder="search">
+      </form>
+
+      <form ng-submit="login(username, password)">
+        <input type="text" class="form-control" placeholder="username" ng-model="username">
+        <input type="text" class="form-control" placeholder="password" ng-model="password">
+        <input type="submit" class="submit">
+      </form>
+    </div>
+
+    <ul class="list-group col-md-8 col-md-pull-4" ng-controller="StoryController">
+      <li class="list-group-item row" ng-repeat="story in stories.stories">
+        <div class="col-sm-1">{{story.id}}</div>
+        <div class="col-sm-1 text-center">
+          <i ng-click="vote(story.id)" class="fa fa-arrow-up"></i>
+          <div>{{story.votes}}</div>
+          <i class="fa fa-arrow-down"></i>
+        </div>
+        <img class="col-sm-2" ng-src="{{story.image}}" alt="">
+        <h3 class="col-sm-8">{{story.text}}</h3>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="https://sky.blackbaudcdn.net/skyux/1.6.9/js/sky-bundle.min.js"></script>
+<script src="./js/boots.js"></script>
+</body>
+</html>
